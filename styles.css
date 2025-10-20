@@ -1,0 +1,203 @@
+:root {
+  /* --- Everforest Dark Hard Theme --- */
+  --fg: #D3C6AA;
+  --red: #E67E80;
+  --orange: #E69875;
+  --yellow: #DBBC7F;
+  --green: #A7C080;
+  --blue: #7FBBB3;
+  --aqua: #83C092;
+  --purple: #D699B6;
+  --dim: #1E2326;
+  --bg-0: #272E33;
+  --bg-1: #2E383C;
+  --bg-2: #374145;
+  --bg-3: #414B50;
+  --bg-4: #495156;
+  --bg-5: #4F5B58;
+  --bg-green: #3C4841;
+  --gray-0: #7A8478;
+  --gray-1: #859289;
+  --gray-2: #9DA9A0;
+}
+
+* {
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "JetBrainsMono NF";
+  color: var(--gray-2);
+}
+
+/* --- YASB Bar --- */
+.yasb-bar {
+  background-color: rgba(39, 46, 51, 0.7);
+}
+
+/* --- Global ToolTip --- */
+.tooltip {
+  background-color: rgba(39, 46, 51, 0.7);
+  border-radius: 4px;
+  color: var(--gray-2);
+  padding: 8px 12px;
+  font-size: 12px;
+  font-family: "JetBrainsMono NF";
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* --- Global Widget --- */
+.widget {
+  padding: 0 8;
+}
+
+.icon {
+  font-size: 14px;
+}
+
+/* --- GlazeWM Workspaces --- */
+.glazewm-workspaces {
+  padding-left: 0;
+}
+
+.glazewm-workspaces .ws-btn {
+  padding: 8;
+  background: transparent;
+  border: none;
+  color: var(--gray-1);
+}
+
+.glazewm-workspaces .ws-btn:hover {
+  background-color: var(--bg-3);
+}
+
+.glazewm-workspaces .ws-btn.active_empty,
+.glazewm-workspaces .ws-btn.active_populated {
+  background-color: var(--green);
+  color: var(--dim);
+}
+
+.glazewm-workspaces .ws-btn.active_empty:hover,
+.glazewm-workspaces .ws-btn.active_populated:hover {
+  background-color: var(--bg-green);
+  color: var(--green);
+}
+
+/* --- Systray --- */
+.systray {
+  background: transparent;
+  border: none;
+  margin: 0;
+  border-left: 4px solid var(--gray-0);
+}
+
+.systray .unpinned-container {
+  background: transparent;
+}
+
+.systray .button {
+  padding: 4;
+  border-radius: 4;
+  border: none;
+}
+
+.systray .button:hover {
+  background: var(--gray-0);
+}
+
+.systray .button[dragging=true] {
+  border-color: var(--aqua);
+}
+
+/* --- Wifi --- */
+.wifi-widget {
+  background-color: transparent;
+  padding-right: 4;
+  border-left: 4px solid var(--gray-0);
+}
+
+.wifi-widget .widget-container .icon {
+  color: var(--green);
+}
+
+/* --- Volume | Audio Menu --- */
+.volume-widget {
+  background-color: transparent;
+  padding: 0 4;
+}
+
+.volume-widget .icon {
+  color: var(--green);
+}
+
+.audio-menu {
+  background-color: rgba(39, 46, 51, 0.6);
+}
+
+.audio-container .device {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 4 12;
+  margin: 4 0;
+}
+
+.audio-container .device.selected {
+  background-color: rgba(255, 255, 255, 0.085);
+  color: var(--green);
+}
+
+.audio-container .device:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* --- Battery --- */
+.battery-widget {
+  background-color: transparent;
+  padding-left: 6;
+}
+
+.battery-widget .widget-container .label {
+  padding-left: 8;
+}
+
+.battery-widget .widget-container .label.status-low {
+  color: var(--red);
+}
+
+.battery-widget .widget-container .label.status-medium {
+  color: var(--yellow);
+}
+
+.battery-widget .widget-container .label.status-high {
+  color: var(--blue);
+}
+
+.battery-widget .widget-container .label.status-full {
+  color: var(--green);
+}
+
+.battery-widget .widget-container .label.status-charging {
+  color: var(--green);
+}
+
+.battery-widget .widget-container .icon.status-low {
+  color: var(--red);
+}
+
+.battery-widget .widget-container .icon.status-medium {
+  color: var(--yellow);
+}
+
+.battery-widget .widget-container .icon.status-high {
+  color: var(--blue);
+}
+
+.battery-widget .widget-container .icon.status-full {
+  color: var(--green);
+}
+
+.battery-widget .widget-container .icon.status-charging {
+  color: var(--green);
+}
+
+/* --- Clock --- */
