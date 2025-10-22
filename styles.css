@@ -93,7 +93,12 @@
 }
 
 .systray .unpinned-container {
-  background: transparent;
+  background: var(--dim);
+  border: 1px solid var(--bg-4);
+  border-left: none;
+  margin: 4 0;
+  border-top-right-radius: 8;
+  border-bottom-right-radius: 8;
 }
 
 .systray .button {
@@ -103,11 +108,31 @@
 }
 
 .systray .button:hover {
-  background: var(--gray-0);
+  background: var(--bg-4);
 }
 
-.systray .button[dragging=true] {
-  border-color: var(--aqua);
+.systray .unpinned-visibility-btn {
+  background-color: transparent;
+  color: var(--gray-2);
+  border: none;
+  padding: 0 4;
+}
+.systray .unpinned-visibility-btn:hover {
+  background-color: var(--bg-5);
+}
+
+.systray .unpinned-visibility-btn:checked {
+  background-color: var(--dim);
+  border: 1px solid var(--bg-4);
+  color: var(--gray-2);
+  border-right: none;
+  border-top-left-radius: 8;
+  border-bottom-left-radius: 8;
+  margin: 4 0;
+}
+
+.systray .unpinned-visibility-btn:checked:hover {
+  background-color: var(--bg-4);
 }
 
 /* --- Wifi | Menu --- */
@@ -274,6 +299,11 @@
 
 .volume-widget .icon.muted {
   color: var(--gray-1);
+}
+
+.volume-widget .label.alt {
+  color: var(--green);
+  padding-left: 4;
 }
 
 .audio-menu {

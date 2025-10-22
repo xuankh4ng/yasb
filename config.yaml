@@ -52,6 +52,7 @@ bars:
 
 widgets:
   # GlazeWM Workspaces
+  # https://github.com/amnweb/yasb/wiki/(Widget)-GlazeWM-Workspaces
   glazewm_workspaces:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
@@ -60,6 +61,7 @@ widgets:
       enable_scroll_switching: false
 
   # Clock
+  # https://github.com/amnweb/yasb/wiki/(Widget)-Clock
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -71,22 +73,24 @@ widgets:
         on_left: "toggle_label"
 
   # Systray
+  # https://github.com/amnweb/yasb/wiki/(Widget)-Systray
   systray:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
       label_collapsed: "◀"
       label_expanded: "▶"
-      label_position: "right" # Can be "left" or "right"
-      icon_size: 14 # Can be any integer between 8 and 64
-      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      label_position: "left"
+      icon_size: 16
+      pin_click_modifier: "alt"
       show_unpinned: true
-      show_unpinned_button: false
+      show_unpinned_button: true
       show_battery: false
       show_volume: false
       show_network: false
 
   # Wifi
+  # https://github.com/amnweb/yasb/wiki/(Widget)-WiFi
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
@@ -131,10 +135,12 @@ widgets:
         on_right: "toggle_label"
 
   # Volume
+  # https://github.com/amnweb/yasb/wiki/(Widget)-Volume
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
       label: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span>{level}"
       tooltip: false
       volume_icons:
         - " "  # Icon for muted
@@ -151,9 +157,10 @@ widgets:
         direction: "down"
       callbacks:
         on_left: "toggle_volume_menu"
-        on_right: "toggle_mute"
+        on_right: "toggle_label"
 
   # Battery
+  # https://github.com/amnweb/yasb/wiki/(Widget)-Battery
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
@@ -176,6 +183,9 @@ widgets:
         icon_medium: "󱊢"
         icon_low: "󱊡"
         icon_critical: "󱃍"
+      callbacks:
+        on_left: "do_nothing"
+        on_right: "toggle_label"
 
   # Weather
   # https://github.com/amnweb/yasb/wiki/(Widget)-Weather
@@ -231,6 +241,7 @@ widgets:
         on_right: "toggle_label"
 
   # Notifications
+  # https://github.com/amnweb/yasb/wiki/(Widget)-Notifications
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
