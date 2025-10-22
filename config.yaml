@@ -47,6 +47,8 @@ bars:
         - wifi 
         - volume
         - battery
+        - notifications
+
 widgets:
   # GlazeWM Workspaces
   glazewm_workspaces:
@@ -55,6 +57,17 @@ widgets:
       hide_empty_workspaces: true
       hide_if_offline: true
       enable_scroll_switching: false
+
+  # Clock
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%I:%M %p}"
+      label_alt: "{%A, %d/%m/%Y | %I:%M %p}"
+      update_interval: 5000
+      tooltip: false
+      callbacks:
+        on_left: "toggle_label"
 
   # Systray
   systray:
@@ -87,7 +100,7 @@ widgets:
       ethernet_icon: "󰈁"
       get_exact_wifi_strength: true
       wifi_icons: [
-        "󰤯 ",  # Icon for 0% strength
+        "󰤮 ",  # Icon for 0% strength
         "󰤟 ",  # Icon for 1-24% strength
         "󰤢 ",  # Icon for 25-49% strength
         "󰤥 ",  # Icon for 50-74% strength
@@ -141,13 +154,12 @@ widgets:
         icon_low: "󱊡"
         icon_critical: "󱃍"
 
-  # Clock
-  clock:
-    type: "yasb.clock.ClockWidget"
+  # Notifications
+  notifications:
+    type: "yasb.notifications.NotificationsWidget"
     options:
-      label: "{%I:%M %p}"
-      label_alt: "{%A, %d/%m/%Y | %I:%M %p}"
-      update_interval: 60000
+      label: "<span> </span>{count}"
+      hide_empty: false
       tooltip: false
       callbacks:
-        on_left: "toggle_label"
+        on_left: "toggle_notification"
