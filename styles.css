@@ -349,21 +349,101 @@
 }
 
 /* --- Weather --- */
+.weather-widget {
+  padding-right: 0;
+}
 
+.weather-widget .icon,
+.weather-widget .label.alt {
+  color: var(--green);
+}
+
+.weather-card {
+  background-color: rgba(39, 46, 51, 0.7);
+}
+
+.weather-card-today .label.location {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.weather-card-today .label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-0);
+}
+
+.weather-card-today .label.alert {
+  font-size: 12px;
+  font-weight: 700;
+  background-color: rgba(247, 199, 42, 0.05);
+  border: 1px solid rgba(247, 209, 42, 0.1);
+  color: rgba(196, 181, 162, 0.85);
+  border-radius: 6px;
+  padding: 5px 0;
+}
+
+.weather-card-day {
+  border: 1px solid var(--bg-5);
+  border-radius: 8px;
+  background-color: rgba(39, 46, 51, 0.3);
+  margin: 8 0 4;
+}
+
+.weather-card-day.active .label,
+.weather-card-day.active {
+  border: none;
+  background-color: var(--bg-green);
+  color: var(--green);
+}
+
+.weather-card-day .label {
+  font-size: 12px;
+  color: var(--gray-1);
+}
+
+.weather-card .hourly-container {
+  min-height: 150px;
+  border: 1px solid var(--bg-5);
+  border-radius: 8px;
+  background-color: rgba(39, 46, 51, 0.3);
+}
+
+.weather-card .hourly-data {
+  color: var(--gray-2);
+  background-color: var(--fg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.weather-widget .icon.sunnyDay,
+.weather-widget .icon.cloudyDay,
+.weather-widget .icon.rainyDay,
+.weather-widget .icon.snowyIcyDay,
+.weather-widget .icon.blizzardDay,
+.weather-widget .icon.foggyDay,
+.weather-widget .icon.thunderstormDay {
+  color: var(--orange);
+}
+
+.weather-widget .icon.clearNight,
+.weather-widget .icon.cloudyNight,
+.weather-widget .icon.rainyNight,
+.weather-widget .icon.snowyIcyNight,
+.weather-widget .icon.blizzardNight,
+.weather-widget .icon.foggyNight,
+.weather-widget .icon.thunderstormNight {
+  color: var(--purple);
+}
 
 /* --- Notifications --- */
 .notification-widget .icon {
   font-size: 14px;
   padding-right: 2;
-  color: var(--gray-1);
+  color: var(--gray-0);
 }
 
-.notification-widget .label {
-  color: var(--gray-1);
-  padding-left: 4;
-}
-
-.notification-widget .icon.new-notification,
-.notification-widget .label.new-notification {
+.notification-widget .icon.new-notification {
   color: var(--green);
 }
