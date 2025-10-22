@@ -15,6 +15,7 @@
   --bg-3: #414B50;
   --bg-4: #495156;
   --bg-5: #4F5B58;
+  --bg-red: #4C3743;
   --bg-green: #3C4841;
   --gray-0: #7A8478;
   --gray-1: #859289;
@@ -109,15 +110,156 @@
   border-color: var(--aqua);
 }
 
-/* --- Wifi --- */
+/* --- Wifi | Menu --- */
 .wifi-widget {
   background-color: transparent;
   padding-right: 4;
   border-left: 4px solid var(--gray-0);
 }
 
+.wifi-widget .widget-container .label.alt,
 .wifi-widget .widget-container .icon {
   color: var(--green);
+}
+
+.wifi-menu {
+  background-color: rgba(39, 46, 51, 0.7);
+  max-height: 350px;
+  min-height: 375px;
+  min-width: 400px;
+}
+
+.wifi-menu .header {
+  background-color: rgba(39, 46, 51, 0.7);
+  color: var(--green);
+  font-size: 18px;
+  padding: 8 0;
+  padding-left: 16;
+  font-weight: 700;
+  border-bottom: 2px solid var(--bg-3);
+}
+
+.wifi-menu .progress-bar {
+  max-height: 4;
+}
+
+.wifi-menu .progress-bar::chunk {
+  background-color: var(--green);
+}
+
+.wifi-menu .error-message {
+  font-weight: 800;
+  color: var(--red);
+  background-color: rgba(39, 46, 51, 0.7);
+}
+
+.wifi-menu .wifi-list {
+  background-color: rgba(39, 46, 51, 0.7);
+  padding: 8 16;
+}
+
+.wifi-menu .wifi-item {
+  padding: 8 16;
+  border-radius: 12;
+  margin: 4 0;
+}
+
+.wifi-menu .wifi-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.wifi-menu .wifi-item .icon {
+  margin-right: 4;
+  font-size: 24px;
+}
+
+.wifi-menu .wifi-item .name {
+  font-size: 14px;
+  font-weight: 700;
+  padding-right: 8;
+}
+
+.wifi-menu .wifi-item .password {
+  background: transparent;
+  font-size: 12px;
+  border: none;
+  border-bottom: 2px solid var(--gray-2);
+}
+
+.wifi-menu .wifi-item .status,
+.wifi-menu .wifi-item .strength {
+  margin-bottom: 4;
+  color: var(--gray-0);
+  font-weight: 600;
+}
+
+.wifi-menu .wifi-item .connect {
+  margin-top: 8;
+  border: none;
+  border-radius: 8;
+  color: var(--green);
+  background-color: var(--bg-green);
+  padding: 4 8;
+}
+
+.wifi-menu .wifi-item .connect:hover {
+  color: var(--dim);
+  background-color: var(--green);
+}
+
+.wifi-menu .wifi-item[active=true] {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.wifi-menu .wifi-item[active=true] .icon,
+.wifi-menu .wifi-item[active=true] .name,
+.wifi-menu .wifi-item[active=true] .status,
+.wifi-menu .wifi-item[active=true] .strength {
+  color: var(--green);
+}
+
+.wifi-menu .wifi-item[active=true] .connect {
+  color: var(--red);
+  background-color: var(--bg-red);
+}
+
+.wifi-menu .wifi-item[active=true] .connect:hover {
+  color: var(--dim);
+  background-color: var(--red);
+}
+
+
+.wifi-menu .footer {
+  background-color: rgba(39, 46, 51, 0.7);
+  padding: 8 16;
+}
+
+.wifi-menu .footer .settings-button {
+  background-color: transparent;
+  border: none;
+  min-width: 26px;
+  min-height: 26px;
+  font-weight: 500;
+  color: var(--gray-1);
+}
+
+.wifi-menu .footer .settings-button:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.wifi-menu .footer .refresh-icon {
+  font-family: "Segoe Fluent Icons";
+  background-color: transparent;
+  border: none;
+  padding: 8;
+  color: var(--gray-1);
+}
+
+.wifi-menu .footer .refresh-icon:hover {
+  color: var(--green);
+  background-color: var(--bg-green);
+  border-radius: 8;
 }
 
 /* --- Volume | Audio Menu --- */
@@ -205,6 +347,9 @@
 .battery-widget .widget-container .icon.status-charging {
   color: var(--green);
 }
+
+/* --- Weather --- */
+
 
 /* --- Notifications --- */
 .notification-widget .icon {

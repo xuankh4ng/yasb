@@ -64,7 +64,7 @@ widgets:
     options:
       label: "{%I:%M %p}"
       label_alt: "{%A, %d/%m/%Y | %I:%M %p}"
-      update_interval: 5000
+      update_interval: 1000
       tooltip: false
       callbacks:
         on_left: "toggle_label"
@@ -91,10 +91,7 @@ widgets:
     options:
       label: "<span>{wifi_icon}</span>"
       label_alt: "<span>{wifi_icon}</span>{wifi_name} | {wifi_strength}%"
-      update_interval: 5000
-      callbacks:
-        on_left: "exec cmd.exe /c start ms-settings:network"
-        on_right: "toggle_label"
+      update_interval: 1000
       ethernet_label: "<span>{wifi_icon}</span>"
       ethernet_label_alt: "<span>{wifi_icon}</span>{ip_addr}"
       ethernet_icon: "󰈁"
@@ -106,6 +103,30 @@ widgets:
         "󰤥 ",  # Icon for 50-74% strength
         "󰤨 "   # Icon for 75-100% strength
       ]
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        wifi_icons_secured: [
+          "󰤬 ",
+          "󰤡 ",
+          "󰤤 ",
+          "󰤧 ",
+          "󰤪 "
+        ]
+        wifi_icons_unsecured: [
+          "󰤫 ",
+          "󰤠 ",
+          "󰤣 ",
+          "󰤦 ",
+          "󰤩 "
+        ]
+      callbacks:
+        on_left: "toggle_menu"
+        on_right: "toggle_label"
 
   # Volume
   volume:
@@ -136,7 +157,7 @@ widgets:
     options:
       label: "<span>{icon}</span>"
       label_alt: "<span>{icon}</span> {percent}% | {time_remaining}"
-      update_interval: 5000
+      update_interval: 1000
       charging_options:
         icon_format: "{charging_icon}"
         blink_charging_icon: false
@@ -153,6 +174,9 @@ widgets:
         icon_medium: "󱊢"
         icon_low: "󱊡"
         icon_critical: "󱃍"
+
+  # Weather
+  # https://github.com/amnweb/yasb/wiki/(Widget)-Weather
 
   # Notifications
   notifications:
