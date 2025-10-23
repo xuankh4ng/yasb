@@ -69,8 +69,18 @@ widgets:
       label_alt: "{%A, %d/%m/%Y | %I:%M %p}"
       update_interval: 1000
       tooltip: false
+      calendar:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "center"
+        direction: "down"
+        show_holidays: false
+        show_week_numbers: false
       callbacks:
-        on_left: "toggle_label"
+        on_left: "toggle_calendar"
+        on_right: "toggle_label"
 
   # Systray
   # https://github.com/amnweb/yasb/wiki/(Widget)-Systray
@@ -83,7 +93,7 @@ widgets:
       label_position: "left"
       icon_size: 16
       pin_click_modifier: "alt"
-      show_unpinned: true
+      show_unpinned: false
       show_unpinned_button: true
       show_battery: false
       show_volume: false
@@ -117,14 +127,12 @@ widgets:
         direction: "down"
         offset_top: 4
         wifi_icons_secured: [
-          "󰤬 ",
           "󰤡 ",
           "󰤤 ",
           "󰤧 ",
           "󰤪 "
         ]
         wifi_icons_unsecured: [
-          "󰤫 ",
           "󰤠 ",
           "󰤣 ",
           "󰤦 ",
@@ -144,8 +152,8 @@ widgets:
       tooltip: false
       volume_icons:
         - " "  # Icon for muted
-        - " "  # Icon for 0-10% volume
-        - " "  # Icon for 11-30% volume
+        - " "  # Icon for 0-10% volume
+        - " "  # Icon for 11-30% volume
         - " "  # Icon for 31-60% volume
         - " "  # Icon for 61-100% volume
       audio_menu:
@@ -233,7 +241,7 @@ widgets:
         hourly_icon_size: 32
         icon_smoothing: true
         temp_line_width: 4
-        current_line_color: "#7FBBB3"
+        current_line_color: "#DBBC7F"
         current_line_width: 2
         current_line_style: "dot"
       callbacks:

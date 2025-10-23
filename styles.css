@@ -31,7 +31,7 @@
 
 /* --- YASB Bar --- */
 .yasb-bar {
-  background-color: rgba(39, 46, 51, 0.7);
+  background-color: rgba(39, 46, 51, 0.5);
 }
 
 /* --- Global ToolTip --- */
@@ -83,6 +83,57 @@
   color: var(--green);
 }
 
+/* --- Clock | Calendar --- */
+.calendar {
+  background-color: rgba(39, 46, 51, 0.3);
+}
+
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+  background-color: rgba(39, 46, 51, 0);
+  border: none;
+  outline: none;
+  color: var(--gray-2);
+}
+
+.calendar .calendar-table::item {
+  padding-top: 2;
+}
+
+.calendar .calendar-table::item:selected {
+  color: var(--dim);
+  background-color: var(--green);
+  border-radius: 4px;
+  padding-top: 2;
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label,
+.calendar .week-label {
+  min-width: 160px;
+  max-width: 160px;
+  font-weight: 700;
+}
+
+.calendar .day-label {
+  /* (Mon, Tue ... Sun) */
+  color: var(--gray-2);
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.calendar .month-label {
+  color: var(--gray-1);
+}
+
+.calendar .date-label {
+  margin-top: -12px;
+  color: var(--green);
+  font-weight: 800;
+  font-size: 80px;
+}
+
 /* --- Systray --- */
 .systray {
   background: transparent;
@@ -93,12 +144,8 @@
 }
 
 .systray .unpinned-container {
-  background: var(--dim);
-  border: 1px solid var(--bg-4);
+  background-color: transparent;
   border-left: none;
-  margin: 4 0;
-  border-top-right-radius: 8;
-  border-bottom-right-radius: 8;
 }
 
 .systray .button {
@@ -117,18 +164,14 @@
   border: none;
   padding: 0 4;
 }
+
 .systray .unpinned-visibility-btn:hover {
   background-color: var(--bg-5);
 }
 
 .systray .unpinned-visibility-btn:checked {
-  background-color: var(--dim);
-  border: 1px solid var(--bg-4);
   color: var(--gray-2);
-  border-right: none;
-  border-top-left-radius: 8;
-  border-bottom-left-radius: 8;
-  margin: 4 0;
+  background-color: transparent;
 }
 
 .systray .unpinned-visibility-btn:checked:hover {
@@ -138,7 +181,7 @@
 /* --- Wifi | Menu --- */
 .wifi-widget {
   background-color: transparent;
-  padding-right: 4;
+  padding-right: 0;
   border-left: 4px solid var(--gray-0);
 }
 
@@ -148,20 +191,18 @@
 }
 
 .wifi-menu {
-  background-color: rgba(39, 46, 51, 0.7);
   max-height: 350px;
   min-height: 375px;
-  min-width: 400px;
+  min-width: 350px;
 }
 
 .wifi-menu .header {
-  background-color: rgba(39, 46, 51, 0.7);
+  background-color: rgba(39, 46, 51, 0.5);
   color: var(--green);
   font-size: 18px;
-  padding: 8 0;
-  padding-left: 16;
-  font-weight: 700;
-  border-bottom: 2px solid var(--bg-3);
+  padding: 12px 0 8px 16px;
+  font-weight: 800;
+  border-bottom: 2px solid var(--gray-0);
 }
 
 .wifi-menu .progress-bar {
@@ -174,17 +215,17 @@
 
 .wifi-menu .error-message {
   font-weight: 800;
-  color: var(--red);
-  background-color: rgba(39, 46, 51, 0.7);
+  color: var(--dim);
+  background-color: var(--red);
 }
 
 .wifi-menu .wifi-list {
-  background-color: rgba(39, 46, 51, 0.7);
-  padding: 8 16;
+  background-color: rgba(39, 46, 51, 0.2);
+  padding: 8 12;
 }
 
 .wifi-menu .wifi-item {
-  padding: 8 16;
+  padding: 8 12;
   border-radius: 12;
   margin: 4 0;
 }
@@ -199,9 +240,9 @@
 }
 
 .wifi-menu .wifi-item .name {
-  font-size: 14px;
-  font-weight: 700;
-  padding-right: 8;
+  font-size: 12px;
+  font-weight: 800;
+  padding-right: 4;
 }
 
 .wifi-menu .wifi-item .password {
@@ -224,7 +265,7 @@
   border-radius: 8;
   color: var(--green);
   background-color: var(--bg-green);
-  padding: 4 8;
+  padding: 8 12;
 }
 
 .wifi-menu .wifi-item .connect:hover {
@@ -255,8 +296,8 @@
 
 
 .wifi-menu .footer {
-  background-color: rgba(39, 46, 51, 0.7);
-  padding: 8 16;
+  background-color: rgba(39, 46, 51, 0.2);
+  padding: 8px 0;
 }
 
 .wifi-menu .footer .settings-button {
@@ -266,11 +307,13 @@
   min-height: 26px;
   font-weight: 500;
   color: var(--gray-1);
+  padding: 0 20px;
 }
 
 .wifi-menu .footer .settings-button:hover {
   color: var(--green);
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .wifi-menu .footer .refresh-icon {
@@ -278,6 +321,7 @@
   background-color: transparent;
   border: none;
   padding: 8;
+  margin-right: 16px;
   color: var(--gray-1);
 }
 
@@ -290,7 +334,7 @@
 /* --- Volume | Audio Menu --- */
 .volume-widget {
   background-color: transparent;
-  padding: 0 4;
+  padding-right: 0;
 }
 
 .volume-widget .icon {
@@ -389,7 +433,7 @@
 }
 
 .weather-card {
-  background-color: rgba(39, 46, 51, 0.7);
+  background-color: rgba(39, 46, 51, 0.2);
 }
 
 .weather-card-today .label.location {
@@ -421,9 +465,12 @@
   margin: 8 0 4;
 }
 
+.weather-card-day.active {
+  border: 1px solid var(--green);
+}
+
 .weather-card-day.active .label,
 .weather-card-day.active {
-  border: none;
   background-color: var(--bg-green);
   color: var(--green);
 }
@@ -442,7 +489,7 @@
 
 .weather-card .hourly-data {
   color: var(--gray-2);
-  background-color: var(--fg);
+  background-color: var(--green);
   font-size: 12px;
   font-weight: 700;
 }
