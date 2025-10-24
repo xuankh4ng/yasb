@@ -47,7 +47,6 @@ bars:
         - wifi 
         - volume
         - battery
-        - weather
         - notifications
 
 widgets:
@@ -152,8 +151,8 @@ widgets:
       tooltip: false
       volume_icons:
         - " "  # Icon for muted
-        - " "  # Icon for 0-10% volume
-        - " "  # Icon for 11-30% volume
+        - " "  # Icon for 0-10% volume
+        - " "  # Icon for 11-30% volume
         - " "  # Icon for 31-60% volume
         - " "  # Icon for 61-100% volume
       audio_menu:
@@ -193,59 +192,6 @@ widgets:
         icon_critical: "󱃍"
       callbacks:
         on_left: "do_nothing"
-        on_right: "toggle_label"
-
-  # Weather
-  # https://github.com/amnweb/yasb/wiki/(Widget)-Weather
-  weather:
-    type: "yasb.weather.WeatherWidget"
-    options:
-      label: "<span>{icon}</span>"
-      label_alt: "<span>{icon}</span> {temp}"
-      api_key: "89ab7b489811476b9cc34332252210"
-      show_alerts: true
-      tooltip: false
-      hide_decimal: true
-      update_interval: 1000
-      units: "metric"
-      location: "Ho Chi Minh, Viet Nam"
-      icons:
-        sunnyDay: " "
-        clearNight: " "
-        cloudyDay: " "
-        cloudyNight: " "
-        rainyDay: " "
-        rainyNight: " "
-        snowyIcyDay: " "
-        snowyIcyNight: " "
-        blizzardDay: "\udb83\udf36"
-        blizzardNight: "\udb83\udf36"
-        foggyDay: " "
-        foggyNight: " "
-        thunderstormDay: " "
-        thunderstormNight: " "
-        default: "\uebaa"
-      weather_card:
-        blur: true
-        round_corners: true
-        round_corners_type: "normal"
-        border_color: "system"
-        alignment: "right"
-        direction: "down"
-        time_format: "12h"
-        icon_smoothing: true
-        offset_top: 4
-        icon_size: 64
-        show_hourly_forecast: true
-        hourly_point_spacing: 88
-        hourly_icon_size: 32
-        icon_smoothing: true
-        temp_line_width: 4
-        current_line_color: "#DBBC7F"
-        current_line_width: 2
-        current_line_style: "dot"
-      callbacks:
-        on_left: "toggle_card"
         on_right: "toggle_label"
 
   # Notifications

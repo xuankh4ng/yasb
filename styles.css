@@ -85,7 +85,7 @@
 
 /* --- Clock | Calendar --- */
 .calendar {
-  background-color: rgba(39, 46, 51, 0.3);
+  background-color: rgba(39, 46, 51, 0.7);
 }
 
 .calendar .calendar-table,
@@ -140,7 +140,7 @@
   border: none;
   margin: 0;
   border-left: 4px solid var(--gray-0);
-  padding: 0 4;
+  padding: 0 8;
 }
 
 .systray .unpinned-container {
@@ -149,13 +149,9 @@
 }
 
 .systray .button {
-  padding: 4;
+  padding-left: 4;
   border-radius: 4;
   border: none;
-}
-
-.systray .button:hover {
-  background: var(--bg-4);
 }
 
 .systray .unpinned-visibility-btn {
@@ -197,7 +193,7 @@
 }
 
 .wifi-menu .header {
-  background-color: rgba(39, 46, 51, 0.5);
+  background-color: rgba(39, 46, 51, 0.7);
   color: var(--green);
   font-size: 18px;
   padding: 12px 0 8px 16px;
@@ -220,7 +216,7 @@
 }
 
 .wifi-menu .wifi-list {
-  background-color: rgba(39, 46, 51, 0.2);
+  background-color: rgba(39, 46, 51, 0.6);
   padding: 8 12;
 }
 
@@ -296,7 +292,7 @@
 
 
 .wifi-menu .footer {
-  background-color: rgba(39, 46, 51, 0.2);
+  background-color: rgba(39, 46, 51, 0.8);
   padding: 8px 0;
 }
 
@@ -334,7 +330,7 @@
 /* --- Volume | Audio Menu --- */
 .volume-widget {
   background-color: transparent;
-  padding-right: 0;
+  padding-right: 4;
 }
 
 .volume-widget .icon {
@@ -351,7 +347,7 @@
 }
 
 .audio-menu {
-  background-color: rgba(39, 46, 51, 0.6);
+  background-color: rgba(39, 46, 51, 0.7);
 }
 
 .audio-container .device {
@@ -420,98 +416,6 @@
 
 .battery-widget .widget-container .icon.status-charging {
   color: var(--green);
-}
-
-/* --- Weather --- */
-.weather-widget {
-  padding-right: 0;
-}
-
-.weather-widget .icon,
-.weather-widget .label.alt {
-  color: var(--green);
-}
-
-.weather-card {
-  background-color: rgba(39, 46, 51, 0.2);
-}
-
-.weather-card-today .label.location {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--green);
-}
-
-.weather-card-today .label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--gray-0);
-}
-
-.weather-card-today .label.alert {
-  font-size: 12px;
-  font-weight: 700;
-  background-color: rgba(247, 199, 42, 0.05);
-  border: 1px solid rgba(247, 209, 42, 0.1);
-  color: rgba(196, 181, 162, 0.85);
-  border-radius: 6px;
-  padding: 5px 0;
-}
-
-.weather-card-day {
-  border: 1px solid var(--bg-5);
-  border-radius: 8px;
-  background-color: rgba(39, 46, 51, 0.3);
-  margin: 8 0 4;
-}
-
-.weather-card-day.active {
-  border: 1px solid var(--green);
-}
-
-.weather-card-day.active .label,
-.weather-card-day.active {
-  background-color: var(--bg-green);
-  color: var(--green);
-}
-
-.weather-card-day .label {
-  font-size: 12px;
-  color: var(--gray-1);
-}
-
-.weather-card .hourly-container {
-  min-height: 150px;
-  border: 1px solid var(--bg-5);
-  border-radius: 8px;
-  background-color: rgba(39, 46, 51, 0.3);
-}
-
-.weather-card .hourly-data {
-  color: var(--gray-2);
-  background-color: var(--green);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.weather-widget .icon.sunnyDay,
-.weather-widget .icon.cloudyDay,
-.weather-widget .icon.rainyDay,
-.weather-widget .icon.snowyIcyDay,
-.weather-widget .icon.blizzardDay,
-.weather-widget .icon.foggyDay,
-.weather-widget .icon.thunderstormDay {
-  color: var(--orange);
-}
-
-.weather-widget .icon.clearNight,
-.weather-widget .icon.cloudyNight,
-.weather-widget .icon.rainyNight,
-.weather-widget .icon.snowyIcyNight,
-.weather-widget .icon.blizzardNight,
-.weather-widget .icon.foggyNight,
-.weather-widget .icon.thunderstormNight {
-  color: var(--purple);
 }
 
 /* --- Notifications --- */
